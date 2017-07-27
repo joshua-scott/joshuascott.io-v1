@@ -76,8 +76,7 @@ nav a:hover {
 .welcome-section {
     background: #328CC1;
     font-size: 2.5em;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding: 100px 0;
 }
 
 .welcome-section h1 {
@@ -86,6 +85,18 @@ nav a:hover {
 
 .welcome-section code {
     padding: 15px;
+}
+
+/* Keep text on one line, on smaller screens */
+@media screen and (max-width: 533px) {
+    .welcome-section {
+        font-size: 2em;
+    }
+}
+@media screen and (max-width: 425px) {
+    .welcome-section {
+        font-size: 1.5em;
+    }
 }
 
 /*
