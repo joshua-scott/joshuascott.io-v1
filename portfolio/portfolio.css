@@ -3,15 +3,6 @@
 --- Global ---
 
 */
-:root {
-    --nav-height: 59px;
-    /* --top-margin: 100px; */
-    --prussian-blue: #0B3C5D;
-    --sky-blue: #328CC1;
-    --gold-leaf: #D9B310;
-    --ivory-black: #1D2731;
-}
-
 *, *:before, *:after {
   -webkit-box-sizing: border-box; 
   -moz-box-sizing: border-box; 
@@ -46,7 +37,6 @@ nav {
 
 nav ul {
     list-style-type: none;
-    /* padding: 0; */
 }
 
 nav a {
@@ -84,8 +74,6 @@ nav a:hover {
 
 */
 .welcome-section {
-    /* height: calc(100vh - var(--nav-height)); */
-    /* background: #7EC0EE; */
     background: #328CC1;
     font-size: 2.5em;
     padding-top: 100px;
@@ -96,13 +84,16 @@ nav a:hover {
     padding-bottom: 20px;
 }
 
+.welcome-section code {
+    padding: 15px;
+}
+
 /*
 
 --- About section ---
 
 */
 .about {
-    /* background: #2F4F4F; */
     background: #0B3C5D;
     padding-top: 80px;
     padding-bottom: 80px;
@@ -141,7 +132,6 @@ nav a:hover {
 --- Projects section ---
 
 */
-
 .projects {
     background: #1D2731;;
     padding-bottom: 50px;
