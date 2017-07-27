@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ES6 Documentation</title>
+    <link rel="stylesheet" href="documentation.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Zilla+Slab" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+
+        <nav id="navbar">
+            <header><h1>EcmaScript 6<h2></header>
+            <a class="main-link" href="#arrow_functions">Arrow Functions</a>
+            <a class="nav-link" href="#Single_Expression">Single Expression</a>
+            <a class="nav-link" href="#Single_Argument">Single Argument</a>
+            <a class="nav-link" href="#No_Arguments">No Arguments</a>
+            <a class="nav-link" href="#Multiple_Expressions">Multiple Expressions</a>
+            <a class="nav-link" href="#Lexical_this">Lexical this</a>
+            <a class="nav-link" href="#Concise_Functional_Iteration">Concise Functional Iteration</a>
+
+            <a class="main-link" href="#let-and-const">Let and Const</a>
+            <a class="nav-link" href="#Block_Scope">Block Scope</a>
+            <a class="nav-link" href="#Hoisting">Hoisting</a>
+            <a class="nav-link" href="#Loop_Scope">Loop Scope</a>
+            <a class="nav-link" href="#Implicit_Scope_Creation">Implicit Scope Creation</a>
+            <a class="nav-link" href="#Read_Only_Const">Read Only Const</a>
+        </nav>
+        
+        
+        <main id="main-doc">
+            <div class="container">
+
+                <article class="arrow-functions">
+
+                    <header class="article-header">
+                        <h2>Arrow Functions</h2>
+                    </header>
+
+                    <section class="intro-section">
+                        <p>Arrow functions are a concise anonymous function syntax, and their this value is lexically bound to their enclosing scope.</p>
+                    </section>
+
+                    <section class="main-section" id="Single_Expression">
+                        <header class="feature-header">
+                            <h3>Single Expression</h3>
+                        </header>
+                        <p>When the arrow function body is a single expression it is implicitly returned.</p>
+                        <div class="codeblock">
+<code>var add = (a,b) => a+b;</code>
+                        </div>
+                    </section>
+
+                    <section class="main-section" id="Single_Argument">
+                        <header class="feature-header">
+                            <h3>Single Argument</h3>
+                        </header>
+                        <p>When the arrow function has only one argument the parens around the parameters can be omitted.</p>
+                        <div class="codeblock">
+<code>var odd = n => n % 2;</code>
+                        </div>
+                    </section>
+
+                    <section class="main-section" id="No_Arguments">
+                        <header class="feature-header">
+                            <h3>No Arguments</h3>
+                        </header>
+                        <p>When the arrow function has no arguments you need an empty parens ().</p>
+                        <div class="codeblock">
+<code>var random = () => Math.random();</code>
+                        </div>
+                    </section>
+
+                    <section class="main-section" id="Multiple_Expressions">
+                        <header class="feature-header">
+                            <h3>Multiple Expressions</h3>
+                        </header>
+                        <p>When the arrow function body has multiple expressions then they must be wrapped in {} and the return statement may not be omitted.</p>
+                        <div class="codeblock">
+<code>var shout = s => {
+    s = s.toUpperCase();
+    s = s + '!';
+    return s;
+}</code>
+                        </div>
+                    </section>
+
+                    <section class="main-section" id="Lexical_this">
+                        <header class="feature-header">
+                            <h3>Lexical this</h3>
+                        </header>
+                        <p>The arrow function's this value is bound to the enclosing scope, so no more need for var self = this.</p>
+                        <div class="codeblock">
+<code>function Counter () {
+    this.count = 0;
+    setInterval(() => this.count++, 1000);
+}
+var counter = new Counter();</code>
+                        </div>
+                    </section>
+
+                    <section class="main-section" id="Concise_Functional_Iteration">
+                        <header class="feature-header">
+                            <h3>Concise Functional Iteration</h3>
+                        </header>
+                        <p>Arrow functions can be used to write iteration, map, reduce and filter operations quite concisely.</p>
+                        <div class="codeblock">
+<code>var data = ['one', 'two', 'three'];
+var processed = data
+    .map(s => s.length)
+    .filter(length => length < 5);</code> 
+                        </div>
+                    </section>
+
+                </article>
+
+                <article class="let-and-const">
+
+                    <header class="article-header">
+                        <h2>Let and Const</h2>
+                    </header>
+                    
+                    <section class="intro-section">
+                        <p>The let keyword declares a variable that is strictly scoped to the current block, statement or expression where it is defined. This is in contrast to var declarations which are scoped to the current function. An addition difference with var is that let variables are not hoisted to the top of the scope and they can only be used at a point in the code after they have been defined.</p>
+                        <p>const variables share all these characteristics with the additional restriction that redeclaring them will generate an error, and changing their value once declared will fail silently.</p>
+                        <p>As a rule of thumb const provides the strictest usage contract and clearly signals a narrow intent that the variable will not be redeclared or subsequently have its value reassigned, therefore const should be used in preference to let and var wherever appropriate.</p>
+                        <p>Examples of "blocks" that let and const variables are scoped to include if statements, for loop headers and bodies and naked {} blocks.</p>
+                    </section>
+                    
+                    <section class="main-section" id="Block_Scope">
+                        <header class="feature-header">
+                            <h3>Block Scope</h3>
+                        </header>
+                        <p>Attempting to access a let or const variable outside the block it's declared in will throw an error. Note the use of a naked {} block in this example to arbitrarily create a new scope.</p>
+                        <div class="codeblock">
+<code>var a = 1;
+
+{
+let b = 2;
+}
+
+console.log(a); // 1
+console.log(b); // ReferenceError, b is undefined</code>                        
+                        </div>
+                    </section>
+                    
+                    <section class="main-section" id="Hoisting">
+                        <header class="feature-header">
+                            <h3>Hoisting</h3>
+                        </header>
+                        <p>Unlike var declarations which are hoisted to the top of their enclosing scope let and const declarations may only be accessed after they've been declared. let and const variables are said to be in the scope's TDZ (temporal dead zone) before they've been declared, and any attempt to read or write them beforehand will generate an error.</p>
+                        <p>Most transpilers currently don't handle this behaviour fully to-spec, so the above example will probably only error in a native ES6 environment.</p>
+                        <div class="codeblock">
+<code>{
+console.log(foo); // 'foo'
+console.log(bar); // ReferenceError: bar is in the 'TDZ'
+var foo = 'foo';
+let bar = 'bar';
+}</code>
+                        </div>
+                    </section>
+                    
+                    <section class="main-section" id="Loop_Scope">
+                        <header class="feature-header">
+                            <h3>Loop Scope</h3>
+                        </header>
+                        <p>When let is used in a for loop header a new i is scoped for each iteration of the loop. This makes writing async code in loops more intuitive since the closure doesn't need to be created manually. This can also help with traditionally counter-intuituve tasks such as applying click event handlers in a loop.</p>
+                        <div class="codeblock">
+<code>for (var i=1; i<=5; i++) {
+    setTimeout(function(){
+        console.log(i);
+    }, i*100);
+}
+// 6,6,6,6,6
+
+for (let i=1; i<=5; i++) {
+    setTimeout(function(){
+        console.log(i);
+    }, i*100);
+}
+// 1,2,3,4,5</code>
+                        </div>
+                    </section>
+                    
+                    <section class="main-section" id="Implicit_Scope_Creation">
+                        <header class="feature-header">
+                            <h3>Implicit Scope Creation</h3>
+                        </header>
+                        <p>Using let within an if block implicitly creates a new scope. This is a hazard of using let. The new scope is easily spotted in the simple example above, but when code becomes more complicated hunting for new scopes created by let could become a cognitive burden. A rule of thumb is to place let declarations at the top of their enclosing block to clearly signpost their use and also avoid being bitten by the TDZ.</p>
+                        <div class="codeblock">
+<code>if ( foo ) {
+    // We're in the same scope as outside the 'if'
+}
+
+if ( foo ) {
+    // We're in a new scope
+    let a = 1;
+}</code>
+                        </div>
+                    </section>
+                    
+                    <section class="main-section" id="Read_Only_Const">
+                        <header class="feature-header">
+                            <h3>Read Only Const</h3>
+                        </header>
+                        <p>As mentioned, reassign a value to a constant will silently fail while redeclaring the constant will throw an error.</p>
+                        <div class="codeblock">
+<code>const foo = 'foo';
+foo = 'bar' // Silently fails, foo is still equal to 'foo'
+const foo = 'bar' // TypeError, foo has already been defined</code>
+                        </div>
+                        <p>However constants are not immutable, therefore the properties of non-primitive values defined as a constant may be manipulated freely.</p>
+                        <div class="codeblock">
+<code>const foo = {a: 1};
+foo.a = 2;
+foo.a; // 2</code>
+                        </div>
+                    </section>
+
+                    <footer>
+                        <p>Page created by <a href="https://github.com/jscott313">Joshua Scott</a>.</p>
+                        <p>Thanks to <a href="https://github.com/jedrichards/es6">jedrichards</a> for the documentation.</p>
+                    </footer>
+                    
+                </article>
+                
+            </div><!-- /container -->
+
+        </main> <!-- /main -->
+
+     </div> <!-- /container --> 
+
+</body>
+</html>

@@ -1,0 +1,135 @@
+/* Global */
+:root {
+    --standard-border: 3px solid #fff;
+    --yellow: #f4d942;
+}
+
+*, *:before, *:after {
+  -webkit-box-sizing: border-box; 
+  -moz-box-sizing: border-box; 
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    color: #fff;
+    background: #131313;
+    font-family: 'Zilla Slab', serif;
+}
+
+/* Navbar */
+nav {
+    width: 25%;
+    height: 100%;
+    float: left;
+    position: fixed;
+    text-align: center;
+    border-right: var(--standard-border);
+}
+
+nav header {
+    font-size: 1.8rem;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+nav a.main-link {
+    font-size: 1.6rem;
+    border-top: var(--standard-border);
+    border-bottom: var(--standard-border);
+}
+
+nav a {
+    display: block;
+    font-size: 1.15rem;
+    color: var(--yellow);
+    padding-top: 15px;
+    padding-bottom: 15px; 
+}
+
+nav a:hover {
+    background-color: #333;
+}
+
+/* Main */
+#main-doc .container {
+    width: 95%;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+article {
+    width: 75%; 
+    float: right;
+}
+
+article .article-header {
+    font-size: 1.6rem; 
+    padding: 15px; 
+    border: 1px solid var(--yellow);;
+    border-radius: 10px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+article .feature-header {
+    font-size: 1.4rem;
+    padding-top: 20px; 
+    padding-bottom: 20px; 
+}
+
+article p {
+    font-size: 1.2rem;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+article section.intro-section p {
+    font-size: 1.4rem;
+}
+
+article .codeblock {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 1.25rem;
+    background-color: #333;
+    white-space: pre-wrap;  
+    border-radius: 10px;
+    margin-left: 20px;
+    margin-right: 80px;;
+    padding-left: 20px;  
+}
+
+/* Footer */
+footer {
+    margin: 50px auto;
+    width: 60%;
+    border: 1px solid var(--yellow);
+    border-radius: 10px;
+    text-align: center;
+    font-size: 0.5rem;
+}
+
+footer p {
+    padding: 5px;
+}
+
+footer a {
+    color: var(--yellow);
+}
+
+/* Mobile */
+@media(max-width: 1024px) {
+    nav {
+        position: relative;
+        width: 100%;
+        float: none;
+        border-left: none;
+    }
+    article {
+        width: 100%;
+        float: none;
+        border-left: none;
+    }
+}
