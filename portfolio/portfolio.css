@@ -32,7 +32,7 @@ p {
 nav {
     background: #1D2731;
     font-size: 1.3em;
-    border-bottom: 2px solid #D9B310;
+    border-bottom: 2px solid #ECD018;
 }
 
 nav ul {
@@ -136,7 +136,7 @@ nav a:hover {
 }
 
 .about .greeting .meet-you {
-    color: #D9B310;
+    color: #ECD018;
 }
 
 .about a {
@@ -198,7 +198,7 @@ nav a:hover {
 }
 
 .project .fa {
-    color: #D9B310;
+    color: #ECD018;
 }
 
 .project .fa {
