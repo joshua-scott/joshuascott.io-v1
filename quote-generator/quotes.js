@@ -13,7 +13,7 @@ const colors = [
 ];
 
 // Quotes API URL
-const endpoint = 'http://quotes.stormconsultancy.co.uk/random.json';
+const endpoint = 'https://crossorigin.me/http://quotes.stormconsultancy.co.uk/random.json';
 // Store the current quote object
 let currentQuote;
 
