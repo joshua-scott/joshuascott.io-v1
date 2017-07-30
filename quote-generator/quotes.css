@@ -1,0 +1,73 @@
+/* Global */
+*, *:before, *:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #777;
+    font-family: 'Zilla Slab';
+    font-size: 1.5em;
+    transition-duration: 1.2s;
+}
+
+/* Content and text */
+.content {
+    background: #fff;
+    border-radius: 20px;
+    margin: 120px auto; 
+    width: 95%;
+    max-width: 800px;
+}
+
+.quote {
+    margin: 0 auto; 
+    width: 85%;
+    padding-top: 30px;
+    font-style: italic;
+}
+
+.author {
+    width: 90%;
+    text-align: right;
+    padding: 10px 0 15px;
+}
+
+/* Buttons */
+.buttons {
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 20px;  
+}
+
+button {
+    width: 5.0em;
+    height: 3.0em;
+    border-style: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button.new {
+    background: green;
+    float: right;
+    width: 7.5em;
+}
+
+button.tweet {
+    background: #00ACED;
+}
+
+button.link {
+    background: #cc5500;
+}
+
+/* Permalink */
+.permalink {
+    font-size: 0.75em;
+    width: 90%;
+    margin: 0 auto;
+    padding-bottom: 20px; 
+    display: none;
+}
