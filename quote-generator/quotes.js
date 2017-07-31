@@ -2,7 +2,6 @@
 const contentBox    = document.querySelector(".content");
 const quoteBox      = contentBox.querySelector(".quote");
 const authorBox     = contentBox.querySelector(".author");
-const linkBtn       = contentBox.querySelector("button.link");
 const tweetBtn      = contentBox.querySelector("a.tweet");
 const newBtn        = contentBox.querySelector("button.new");
 
@@ -12,37 +11,40 @@ const colors = [
 ];
 
 // Quotes API URL
-const endpoint = 'https://crossorigin.me/https://talaikis.com/api/quotes/random/';
-// Store the current quote object
-let currentQuote;
+const endpoint = 'https://crossorigin.me/https://talaikis.com/api/quotes/';
+let quotes = [];
+let currentQuote = 0;
 
 // Fetch a new quote, check it's different, then pass it to processQuote
 // If it's the same, get another quote
-const newQuote = function () {
+const getQuotes = function () {
     fetch(endpoint)
         .then(blob => blob.json())
-        .then(quote => {
-            if (quote === currentQuote) {
-                newQuote();
-            } else {
-                processQuote(quote);
-            }
+        .then(array => {
+            quotes = array
+            newQuote();
         });
 };
 
 // Update the elements on page with a new quote
-function processQuote(q) {
+function newQuote() {
     newColor();
-    quoteBox.textContent = q.quote;
-    authorBox.textContent = "~ " + q.author;
-    currentQuote = q;
-    tweetBtn.href = getTweetHref();
+    // If we've ran out of quotes and need more
+    if (currentQuote >= quotes.length) {
+        currentQuote = 0;
+        getQuotes();
+    } else {
+        quoteBox.textContent = quotes[currentQuote].quote;
+        authorBox.textContent = "~ " + quotes[currentQuote].author;
+        tweetBtn.href = getTweetHref();
+        currentQuote += 1;
+    }
 }
 
 function getTweetHref() {
     const tweetPrefix = 'https://twitter.com/intent/tweet?hashtags=quotes&text=';
     // Note: tweet text may go over the 140char limit, but user can edit before sending
-    return `${tweetPrefix}"${currentQuote.quote}" ~${currentQuote.author}`;
+    return `${tweetPrefix}"${quotes[currentQuote].quote}" ~${quotes[currentQuote].author}`;
 }
 
 function newColor() {
@@ -59,11 +61,11 @@ function newColor() {
     authorBox.style.color = newColor;
 }
 
-// Load a quote when the page first loads
-newQuote();
-
-/* Event listeners */
+/* Event listeners*/
 newBtn.addEventListener("click", newQuote);
-
 // Can also press Space for a new quote
 document.addEventListener('keyup', e => e.code === "Space" && newQuote());
+
+// On page load:
+newColor();
+getQuotes();
