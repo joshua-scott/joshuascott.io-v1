@@ -59,15 +59,3 @@ button.tweet {
     background: #00ACED;
 }
 
-button.link {
-    background: #cc5500;
-}
-
-/* Permalink */
-.permalink {
-    font-size: 0.75em;
-    width: 90%;
-    margin: 0 auto;
-    padding-bottom: 20px; 
-    display: none;
-}

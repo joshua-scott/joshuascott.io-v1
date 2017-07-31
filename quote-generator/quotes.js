@@ -2,7 +2,6 @@
 const contentBox    = document.querySelector(".content");
 const quoteBox      = contentBox.querySelector(".quote");
 const authorBox     = contentBox.querySelector(".author");
-const permalinkBox  = contentBox.querySelector(".permalink");
 const linkBtn       = contentBox.querySelector("button.link");
 const tweetBtn      = contentBox.querySelector("a.tweet");
 const newBtn        = contentBox.querySelector("button.new");
@@ -37,7 +36,6 @@ function processQuote(q) {
     quoteBox.textContent = q.quote;
     authorBox.textContent = "~ " + q.author;
     currentQuote = q;
-    permalinkBox.textContent = q.permalink;
     tweetBtn.href = getTweetHref();
 }
 
@@ -59,12 +57,6 @@ function newColor() {
     document.body.style.background = newColor;
     quoteBox.style.color = newColor;
     authorBox.style.color = newColor;
-    permalinkBox.style.color = newColor;
-}
-
-function displayPermalink() {
-    const isDisplayed = (permalinkBox.style.display === 'block');
-    permalinkBox.style.display = isDisplayed ? 'none' : 'block';
 }
 
 // Load a quote when the page first loads
@@ -72,7 +64,6 @@ newQuote();
 
 /* Event listeners */
 newBtn.addEventListener("click", newQuote);
-linkBtn.addEventListener("click", displayPermalink);
 
 // Can also press Space for a new quote
 document.addEventListener('keyup', e => e.code === "Space" && newQuote());
