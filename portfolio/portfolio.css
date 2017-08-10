@@ -168,16 +168,17 @@ nav a:hover {
     justify-content: space-around; 
 }
 
-.projects .project {
+.project {
     background: #328CC1;
     border: 3px solid #0B3C5D;
     flex-basis: 400px;
     height: 260px;
     margin: 20px 20px;
     border-radius: 10px;
+    transition-duration: 0.25s;
 }
 
- .projects h2 {
+ h2 {
     padding: 25px;
     display: block;
     font-weight: normal;
@@ -192,16 +193,14 @@ nav a:hover {
     font-weight: normal;
 }
 
-.project a:hover,
-.project h3:hover {
+.project:hover {
     text-decoration: underline;
+    transform: scale(1.1);
+    transition-duration: 0.25s;
 }
 
 .project .fa {
     color: #ECD018;
-}
-
-.project .fa {
     padding-left: 10px;
 }
 
