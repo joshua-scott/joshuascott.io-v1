@@ -1,8 +1,8 @@
 ## Josh's websites
 
-Hi. I'm Josh. Here, you'll find links to some websites I made. I'm still learning, so not everything will always work. But as long as they improve over time, I'm on the right track!
+Hi. I'm Josh. Here, you'll find links to some websites I made. Check out my [my portfolio](https://jscott313.github.io/portfolio/portfolio.html) for additional links and contact information.
 
-- [My portfolio](https://jscott313.github.io/portfolio/portfolio.html)
+- [Quote generator](https://jscott313.github.io/quotegenerator)
 - [Technical documentation page](https://jscott313.github.io/technical-documentation-page/documentation.html)
 - [Product landing page](https://jscott313.github.io/landing-page/landing.html)
 - [Survey form](https://jscott313.github.io/survey-form/survey.html)
