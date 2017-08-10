@@ -52,7 +52,7 @@ nav a:hover {
 }
 
 /* Flex styles */
-@media screen and (min-width: 420px) {
+@media screen and (min-width: 457px) {
     nav a {
         padding: 8px 15px;
     }
@@ -84,7 +84,7 @@ nav a:hover {
 
 .welcome-section h1 {
     padding-bottom: 20px;
-    letter-spacing: 4px; 
+    letter-spacing: 4px;
 }
 
 .welcome-section code {
@@ -95,6 +95,11 @@ nav a:hover {
 @media screen and (max-width: 630px) {
     .welcome-section {
         font-size: 1.8em;
+    }
+
+    .welcome-section h1 {
+        padding-bottom: 20px;
+        letter-spacing: normal;
     }
 }
 @media screen and (max-width: 500px) {
