@@ -11,7 +11,7 @@ const colors = [
 ];
 
 // Quotes API URL
-const endpoint = 'https://crossorigin.me/https://talaikis.com/api/quotes/';
+const endpoint = 'https://cors-anywhere.herokuapp.com/https://talaikis.com/api/quotes/';
 let quotes = [];
 let currentQuote = 0;
 
