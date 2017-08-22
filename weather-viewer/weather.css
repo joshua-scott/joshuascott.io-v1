@@ -1,0 +1,26 @@
+body {
+    font-family: 'Raleway';
+    background: #cc5500;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.container {
+    display: none;
+    margin: 50px auto;
+}
+
+.container .location {
+    font-size: 1.3em;
+}
+
+.container .summary {
+    padding: 5px 0;
+}
+
+.container .units {
+    cursor: pointer;
+    color: skyblue;
+}
