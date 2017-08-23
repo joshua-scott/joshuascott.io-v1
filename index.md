@@ -1,6 +1,5 @@
-## Josh's projects
-
-Hi. I'm Josh. Here, you'll find links to some of my projects. Check out my [my portfolio](https://jscott313.github.io/portfolio/portfolio.html) for additional links and contact information.
+Hi. I'm Josh, an IT student in Turku, Finland, and aspiring web developer. 
+This is where I host my projects. Check out my [my portfolio](https://jscott313.github.io/portfolio/portfolio.html) for additional links and contact information.
 
 - [Weather viewer](https://jscott313.github.io/weather-viewer/weather.html)
 - [Quote generator](https://jscott313.github.io/quote-generator/quotes.html)
