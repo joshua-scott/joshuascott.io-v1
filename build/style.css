@@ -7,7 +7,8 @@
 *,
 *:before,
 *:after {
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
@@ -61,17 +62,24 @@ nav a:hover {
         padding: 8px 15px;
     }
     nav ul {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
     }
     nav li {
-        flex: 1 1 0;
+        -webkit-box-flex: 1;
+            -ms-flex: 1 1 0px;
+                flex: 1 1 0;
     }
     nav li .contact-text {
         display: none;
     }
     nav {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around;
     }
 }
 
@@ -181,19 +189,25 @@ nav a:hover {
 .projects .container {
     max-width: 1600px;
     margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
 }
 
 .project {
     background: #328CC1;
     border: 3px solid #0B3C5D;
-    flex-basis: 400px;
+    -ms-flex-preferred-size: 400px;
+        flex-basis: 400px;
     height: 260px;
     margin: 20px 20px;
     border-radius: 10px;
-    transition-duration: 0.25s;
+    -webkit-transition-duration: 0.25s;
+            transition-duration: 0.25s;
 }
 
 h2 {
@@ -213,8 +227,10 @@ h2 {
 
 .project:hover {
     text-decoration: underline;
-    transform: scale(1.1);
-    transition-duration: 0.25s;
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    -webkit-transition-duration: 0.25s;
+            transition-duration: 0.25s;
 }
 
 .project .fa {
