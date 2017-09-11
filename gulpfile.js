@@ -4,6 +4,10 @@ const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 
+const bsOptions = {
+  server: './'
+};
+
 const sassOptions = {
   outputStyle: 'compressed'
 };
@@ -19,11 +23,7 @@ gulp.task('styles', () => {
 });
 
 gulp.task('serve', ['styles'], () => {
-
-  browserSync.init({
-    server: './'
-  });
-
+  browserSync.init(bsOptions);
   gulp.watch('./scss/**/*.scss', ['styles']);
   gulp.watch('./*.html').on('change', browserSync.reload);
 });
