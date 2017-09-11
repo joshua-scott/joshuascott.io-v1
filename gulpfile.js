@@ -5,7 +5,7 @@ const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 
 gulp.task('styles', () => {
-  return gulp.src('./scss/*.scss')
+  return gulp.src('./scss/**/*.scss')
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
@@ -20,7 +20,7 @@ gulp.task('serve', ['styles'], () => {
     server: './'
   });
 
-  gulp.watch('./scss/*.scss', ['styles']);
+  gulp.watch('./scss/**/*.scss', ['styles']);
   gulp.watch('./*.html').on('change', browserSync.reload);
 });
 
