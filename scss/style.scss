@@ -37,6 +37,12 @@ nav {
   border-bottom: 2px solid #ECD018;
   ul {
     list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      flex: 1;
+    }
   }
   a {
     text-decoration: none;
@@ -48,20 +54,22 @@ nav {
       background: #444;
     }
   }
-  @media screen and (min-width: 540px) {
+  ul.contact {
+    a {
+      color: (#ECD018 - 100);
+    }
+    .contact-text {
+      display: none;
+    }
+  }
+  @media screen and (min-width: 535px) {
     display: flex;
     justify-content: space-around;
     a {
-      padding: 8px 15px;
+      padding: 10px 20px;
     }
-    ul {
-      display: flex;
-    }
-    li {
-      flex: 1 1 0;
-      .contact-text {
-        display: none;
-      }
+    ul.contact {
+      order: 1;
     }
   }
 }
