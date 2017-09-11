@@ -4,10 +4,14 @@ const browserSync = require('browser-sync').create();
 const sass = require('gulp-sass');
 const sourcemaps = require('gulp-sourcemaps');
 
+const sassOptions = {
+  outputStyle: 'compressed'
+};
+
 gulp.task('styles', () => {
   return gulp.src('./scss/**/*.scss')
     .pipe(sourcemaps.init())
-    .pipe(sass().on('error', sass.logError))
+    .pipe(sass(sassOptions).on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('./build'))
