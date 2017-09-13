@@ -1,4 +1,9 @@
 @import "normalize";
+$whiteish: #ddd;
+$dark-blue: #1d2731;
+$mid-blue: #0b3C5d;
+$light-blue: #328cc1;
+$yellow: #ecd018;
 html {
   box-sizing: border-box;
 }
@@ -11,8 +16,7 @@ html {
 }
 
 body {
-  color: #fff;
-  background: #888;
+  color: $whiteish;
   font-family: 'Lato', sans-serif;
   font-size: 1.2rem;
   text-align: center;
@@ -23,9 +27,9 @@ p {
 }
 
 nav {
-  background: #1D2731;
+  background: $dark-blue;
   font-size: 1.3em;
-  border-bottom: 2px solid #ECD018;
+  border-bottom: 2px solid $yellow;
   ul {
     list-style-type: none;
     padding: 0;
@@ -38,7 +42,7 @@ nav {
   a {
     text-decoration: none;
     text-align: center;
-    color: #fff;
+    color: $whiteish;
     display: block;
     padding: 4px 15px;
     transition: background 0.6s ease;
@@ -48,7 +52,7 @@ nav {
   }
   ul.contact {
     a {
-      color: (#ECD018 - 100);
+      color: ($yellow - 100);
     }
     .contact-text {
       display: none;
@@ -67,7 +71,7 @@ nav {
 }
 
 .welcome-section {
-  background: #328CC1;
+  background: $light-blue;
   font-size: 2.5em;
   padding: 80px 0;
   h1 {
@@ -101,7 +105,7 @@ nav {
 }
 
 .about {
-  background: #0B3C5D;
+  background: $mid-blue;
   padding: 40px 0;
   .container {
     max-width: 1000px;
@@ -112,7 +116,7 @@ nav {
     padding: 10px 15px;
   }
   a {
-    color: #fff;
+    color: $whiteish;
   }
   .fa-handshake-o {
     font-size: 3em;
@@ -122,7 +126,7 @@ nav {
     padding-top: 15px;
     padding-bottom: 10px;
     .meet-you {
-      color: #ECD018;
+      color: $yellow;
       @media screen and (max-width: 500px) {
         display: block;
       }
@@ -131,7 +135,7 @@ nav {
 }
 
 .projects {
-  background: #1D2731;
+  background: $dark-blue;
   padding-bottom: 50px;
   h2 {
     padding: 25px;
@@ -150,8 +154,8 @@ nav {
     justify-content: space-around;
   }
   .project {
-    background: #328CC1;
-    border: 3px solid #0B3C5D;
+    background: $light-blue;
+    border: 3px solid $mid-blue;
     flex-basis: 400px;
     height: 260px;
     margin: 20px 20px;
@@ -160,7 +164,7 @@ nav {
     a,
     h3 {
       text-decoration: none;
-      color: #fff;
+      color: $whiteish;
       font-size: 1.1em;
       font-weight: normal;
     }
@@ -170,7 +174,7 @@ nav {
       max-height: 80%;
     }
     .fa {
-      color: #ECD018;
+      color: $yellow;
       padding-left: 10px;
     }
     &:hover {
