@@ -17,8 +17,8 @@ gulp.task('styles', () => {
     .pipe(sourcemaps.init())
     .pipe(sass(sassOptions).on('error', sass.logError))
     .pipe(autoprefixer())
-    .pipe(sourcemaps.write())
-    .pipe(gulp.dest('./build'))
+    .pipe(sourcemaps.write('.'))
+    .pipe(gulp.dest('./dist'))
     .pipe(browserSync.stream());
 });
 
@@ -27,5 +27,7 @@ gulp.task('serve', ['styles'], () => {
   gulp.watch('./scss/**/*.scss', ['styles']);
   gulp.watch('./*.html').on('change', browserSync.reload);
 });
+
+gulp.task('build', ['styles']);
 
 gulp.task('default', ['serve']);
