@@ -1,0 +1,67 @@
+## Basic Configuration
+baseurl = "https://joshuascott.io/"
+builddrafts = false
+canonifyurls = false
+languageCode = "en-GB"
+
+contentdir = "content"
+layoutdir = "layouts"
+publishdir = "public"
+
+author = "Joshua Scott"
+title = "Joshua Scott"
+
+theme = "hugo-goa"
+
+## Hugo Built-in Features
+# disqusShortname = "https-shenoybr-github-io-hugo-goa-demo" # Comment out to disable Disqus.
+# googleAnalytics = "XYZ"
+enableRobotsTXT = true
+
+## Site Settings
+[params]
+author = "Joshua Scott"
+intro = "Web Developer"
+description = "I like to make websites and Progressive Web Apps"
+authorimage = "me.jpg"
+dateformat = "Jan 2, 2006"
+
+## Site Meta Settings
+[params.meta]
+description = "Simple minimalist theme"
+keywords = "joshua scott, web developer, turku"
+
+## Social Accounts
+[params.social]
+twitter = "_joshuascott"
+github = "joshua-scott"
+email = "jscott313@gmail.com"
+#instagram = "<username>"
+#xing = "<username>"
+#linkedin = "<username>"
+#facebook = "<username>"
+#google = "<username>"
+#stackoverflow = "<username>"
+
+## Extras
+[params.extra]
+copyright = "Interested in hiring me? [Check out my CV.](/JoshuaScott.pdf)"
+poweredby = false
+highlightjs = false
+
+## Main Menu
+[[menu.main]]
+    name = "about"
+    identifier = "about"
+    weight = 100
+    url = "/about/"
+[[menu.main]]
+    name = "projects"
+    identifier = "projects"
+    weight = 200
+    url = "/projects/"
+[[menu.main]]
+    name = "blog"
+    weight = 300
+    identifier = "blog"
+    url = "/blog/"
