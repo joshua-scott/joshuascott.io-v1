@@ -22,7 +22,7 @@ enableRobotsTXT = true
 [params]
 author = "Joshua Scott"
 intro = "Web Developer"
-description = "I like to make websites and Progressive Web Apps"
+description = "...and I.T. student in Turku, Finland."
 authorimage = "me.jpg"
 dateformat = "Jan 2, 2006"
 
@@ -45,7 +45,7 @@ email = "jscott313@gmail.com"
 
 ## Extras
 [params.extra]
-copyright = "Interested in hiring me? [Check out my CV.](/JoshuaScott.pdf)"
+copyright = "Interested in hiring me? [Check out my CV.](/static/JoshuaScott.pdf)"
 poweredby = false
 highlightjs = false
 
