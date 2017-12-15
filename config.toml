@@ -28,8 +28,8 @@ dateformat = "Jan 2, 2006"
 
 ## Site Meta Settings
 [params.meta]
-description = "Simple minimalist theme"
-keywords = "joshua scott, web developer, turku"
+description = "I'm a web developer in Turku, Finland."
+keywords = "joshua scott, web developer, turku, javascript, frontend"
 
 ## Social Accounts
 [params.social]
@@ -45,7 +45,7 @@ email = "jscott313@gmail.com"
 
 ## Extras
 [params.extra]
-copyright = "Interested in hiring me? [Check out my CV.](/static/JoshuaScott.pdf)"
+copyright = "Interested in hiring me? [Check out my CV.](/JoshuaScott.pdf)"
 poweredby = false
 highlightjs = false
 
