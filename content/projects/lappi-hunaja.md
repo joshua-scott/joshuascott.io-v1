@@ -1,7 +1,12 @@
 ---
-title: "Lappi-Hunaja website"
+title: "Lappi-Hunaja"
 draft: false
+comments: false
 ---
+
+**URL**
+
++ [https://lappi-hunaja.fi/en](https://lappi-hunaja.fi/en)
 
 **Completed in:**
 
@@ -15,7 +20,7 @@ draft: false
 + MySQL
 + Bootstrap
 
-My first 'real-world' project was to build the website for a local(ish) company called Lappi-Hunaja. [Here's a link to the site.](https://lappi-hunaja.fi/en)
+My first 'real-world' project was to build the website for a local(ish) company called Lappi-Hunaja.
 
 I worked on this with two of my classmates at uni, and really enjoyed it. I'd only begun 'properly' learning web development around 2-3 months before, and it accelerated my learning *hugely*. There were plenty of challenges to solve along the way, many of which I'd never encountered before. How best to integrate multiple languages (with automatic selection based on browser preferences)? A calendar with a search feature? One of those annoying 'subscribe to our email' popups (sorry, world!), that doesn't bother the user *too* much? Photo galleries? An integrated map? A customer survey? An easy way for the business to update the site (CRM)? How should all the data be stored? How to *deploy* the site when it's ready? We were complete noobs and I loved it.
 

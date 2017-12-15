@@ -62,6 +62,6 @@ highlightjs = false
     url = "/projects/"
 [[menu.main]]
     name = "blog"
-    weight = 300
     identifier = "blog"
+    weight = 300
     url = "/blog/"
