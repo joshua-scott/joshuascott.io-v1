@@ -17,9 +17,9 @@
   },
   "homepage": "https://github.com/jscott313/jscott313.github.io#readme",
   "devDependencies": {
-    "browser-sync": "^2.18.13",
+    "browser-sync": "^2.23.5",
     "gulp": "^3.9.1",
-    "gulp-autoprefixer": "^4.0.0",
+    "gulp-autoprefixer": "^4.1.0",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.6.1"
   }
